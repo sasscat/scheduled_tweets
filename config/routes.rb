@@ -9,4 +9,13 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "about", to: "about#index"
+
+  # the default rails page only works in development
+  # will give you a 404 error if you try to use the app without a # route
+
+  # get "/", to: "main#index"
+  # create a main controller with an index action 
+  # the / is optional and you can do get "", to...
+  # can also do:
+  root to: "main#index"
 end
